@@ -12,6 +12,6 @@ def elements_sum(arr, target):
         res.add(i)
     return False
     
-arr = arr = list(map(int, input().split()))
+arr = list(map(int, input().split()))
 target = int(input())
 print(elements_sum(arr, target))
