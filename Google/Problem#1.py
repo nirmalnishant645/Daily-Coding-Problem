@@ -4,12 +4,12 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 Bonus: Can you do this in one pass?
 '''
 def elements_sum(arr, target):
-    dict = {}
-    for i in range(len(arr)):
-        temp = target - arr[i]
-        if temp in dict:
+    res = set()
+    for i in arr:
+        temp = target - i
+        if temp in res:
             return True
-        dict.update({arr[i] : i})
+        res.add(i)
     return False
     
 arr = arr = list(map(int, input().split()))
